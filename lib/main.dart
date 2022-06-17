@@ -162,7 +162,27 @@ class MyFirstApp extends StatelessWidget {
   //this forces the code to override the existing build method.
   //Do not have to do this, but it is good practice.
   Widget build(BuildContext context) {
-    return MaterialApp(home: Text('Hello!'));
+    var questions = [
+      'What Car Manufacturers are you interested in?',
+      'What motorsports are you interested in?',
+      'Are you also interested in Motorcycles?'
+          'Vanlife?'
+    ];
+    return MaterialApp(
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text('MotorChat'),
+          ),
+          body: Column(children: [
+            Text('Answer the following questions to get started!'),
+            RaisedButton(child: Text('Answer 1'), onPressed: null),
+            RaisedButton(child: Text('Answer 2'), onPressed: null),
+            RaisedButton(child: Text('Answer 3'), onPressed: null),
+            RaisedButton(child: Text('Answer 4'), onPressed: null),
+          ])
+          //Text('The App to Bring Petrol Heads Together'),
+          ),
+    );
   }
 }
 
